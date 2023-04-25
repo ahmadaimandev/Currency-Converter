@@ -2,8 +2,8 @@
     font-family: 'Poppins', sans-serif;
 
     /*Color Section*/
-    --BG-color: #675AFE;
-    --WrapperBG-color: #fff;
+    --main-purple-color: #675AFE;
+    --main-white-color: #fff;
 }
 * {
     margin: 0;
@@ -15,13 +15,13 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: var(--BG-color);
+    background: var(--main-purple-color);
 }
 .wrapper {
     width: 370px;
     padding: 30px;
     border-radius: 7px;
-    background: var(--WrapperBG-color);
+    background: var(--main-white-color);
 }
 .wrapper header {
     font-size: 28px;
@@ -50,7 +50,7 @@ form input {
 form input:focus { /*:focus CSS pseudo-class represents an element (such as a form input) that has received focus. 
     It is generally triggered when the user clicks or taps on an element or selects it with the keyboard's Tab key*/
     padding: 0 14px;
-    border: 2px solid var(--BG-color); 
+    border: 2px solid var(--main-purple-color); 
 }
 form .drop-list {
     display: flex;
@@ -74,4 +74,28 @@ form .drop-list {
 }
 .select-box img {
     max-width: 25px;
+}
+.drop-list .icon {
+    font-size: 22px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+form .exchange-rate {
+    font-size: 17px;
+    margin: 20px 0 30px;
+    justify-content: center;
+    text-align: center;
+}
+form button {
+    height: 52px;
+    color: var(--main-white-color);
+    font-size: 17px;
+    cursor: pointer;
+    background: var(--main-purple-color);
+}
+form p {
+    font-size: 12px;
+    justify-content: center;
+    text-align: center;
+    padding: 6px;
 }
