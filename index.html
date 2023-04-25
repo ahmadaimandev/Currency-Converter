@@ -20,7 +20,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <header>Currency Converter</header>
+        <header>Currency Exhchange</header>
         <form action="">
             <div class="amount">
                 <p>Enter Amount</p>
@@ -30,7 +30,7 @@
                 <div class="from">
                     <p>From</p>
                     <div class="select-box">
-                        <img src="https://flagsapi.com/BE/shiny/64.png">
+                        <img src="https://flagsapi.com/US/shiny/64.png" alt="flag">
                         <select>
                             <option value="USD">USD</option>
                             <option value="IDR">IDR</option>
@@ -39,7 +39,25 @@
                         </select>
                     </div>
                 </div>
+                <div class="icon"><i class="fa-solid fa-arrow-right-arrow-left"></i></div>
+                <div class="To">
+                    <p>To</p>
+                    <div class="select-box">
+                        <img src="https://flagsapi.com/MY/shiny/64.png" alt="flag">
+                        <select>
+                            <option value="USD">MY</option>
+                            <option value="IDR">SGD</option>
+                            <option value="MYR">US</option>
+                            <option value="SGD">YEN</option>
+                        </select>
+                    </div>
+                </div>
             </div>
+            <div class="exchange-rate">
+                1 USD = 4.43 MYR
+            </div>
+            <button>Get Exchange Rate</button>
+            <p style="font-size: 10px;">Exchange rates are provided by</p>
         </form>
     </div>
 </body>
