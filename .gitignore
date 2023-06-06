@@ -3,3 +3,7 @@ node_modules/
 
 #Ignore .env files
 .env
+
+#Ignore Json Packcage files
+package-lock.Json
+package.json
