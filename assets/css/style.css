@@ -68,20 +68,50 @@ form .drop-list {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 20px;
 }
 
+/*Country List Select Box*/
 .drop-list .select-box {
   display: flex;
   width: 115px;
   height: 45px;
   align-items: center;
   justify-content: center;
+  border: 1px solid #999;
+  border-radius: 15px;
 }
 
 .select-box select {
   width: auto;
+  font-size: 16px;
+  margin: 0 -5px 0 5px;
 }
 
 .select-box img {
   max-width: 25px;
+}
+
+.drop-list .icon {
+  font-size: 22px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+form .exchange-rate {
+  font-size: 17px;
+  margin: 20px 0 30px;
+}
+
+button {
+  border-radius: 20px;
+}
+
+form button {
+  height: 50px;
+  color: #fff;
+  background: var(--background-color);
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: 600;
 }
