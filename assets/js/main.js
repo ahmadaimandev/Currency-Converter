@@ -161,12 +161,39 @@ const country_code = {
 };
 
 const dropList = document.querySelectorAll('.drop-list select');
+const getButton = document.querySelector('form button');
 
 for (let i = 0; i < dropList.length; i++) {
   for (const currency_code in country_code) {
-    //create a option tag with passing the currency code text and value
-    let optionTag = `<option value="${currency_code}">${currency_code}</option>`;
-    //insert an option tag inside the select tag
+
+    //select the USD as default currency and MYR currency to exchange
+    let selected;
+    if (i == 0) {
+      selected = currency_code == "USD" ? "selected" : "";
+    } else if (i == 1) {
+      selected = currency_code == "MYR" ? "selected" : "";
+    }
+
+    //create an option tag with the currency code text and value
+    let optionTag = `<option value="${currency_code}" ${selected}>${currency_code}</option>`;
+
+    //insert the option tag inside the select tag
     dropList[i].insertAdjacentHTML("beforeend", optionTag);
   }
+}
+
+getButton.addEventListener("click", e => {
+  e.preventDefault(); //prevent form submission
+  getExchangeRate();
+});
+
+function getExchangeRate() {
+  const amount = document.querySelector('.amount input');
+  let amountVal = amount.value;
+  if (amountVal === "" || amountVal === "0") {
+    amount.value = "1"; // corrected assignment operator
+    amountVal = 1;
+  }
+  // Perform further calculations or API requests for exchange rate
+  // ...
 }
