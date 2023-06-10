@@ -159,15 +159,18 @@ const country_code = {
     "ZMK" : "ZM",
     "ZWD" : "ZW"
 };
-require('dotenv').config();
+// Load environment variables from .env file
+dotenv.config();
+
 const dropList = document.querySelectorAll('.drop-list select');
+const fromCurrency = document.querySelector('.from select');
+const toCurrency = document.querySelector('.to select');
 const getButton = document.querySelector('form button');
 const apiKey = process.env.API_KEY;
 
 for (let i = 0; i < dropList.length; i++) {
   for (const currency_code in country_code) {
-
-    //select the USD as default currency and MYR currency to exchange
+    // Select the USD as the default currency and MYR currency to exchange
     let selected;
     if (i == 0) {
       selected = currency_code == "USD" ? "selected" : "";
@@ -175,18 +178,18 @@ for (let i = 0; i < dropList.length; i++) {
       selected = currency_code == "MYR" ? "selected" : "";
     }
 
-    //create an option tag with the currency code text and value
+    // Create an option tag with the currency code text and value
     let optionTag = `<option value="${currency_code}" ${selected}>${currency_code}</option>`;
 
-    //insert the option tag inside the select tag
+    // Insert the option tag inside the select tag
     dropList[i].insertAdjacentHTML("beforeend", optionTag);
   }
 }
 
 getButton.addEventListener("click", e => {
-  e.preventDefault(); //prevent form submission
+  e.preventDefault(); // Prevent form submission
   const amount = document.querySelector('.amount input');
-  amount.value = "1"; // reset the input field to "1"
+  amount.value = "1"; // Reset the input field to "1"
   getExchangeRate();
 });
 
