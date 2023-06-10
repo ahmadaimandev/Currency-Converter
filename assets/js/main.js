@@ -159,9 +159,10 @@ const country_code = {
     "ZMK" : "ZM",
     "ZWD" : "ZW"
 };
-
+require('dotenv').config();
 const dropList = document.querySelectorAll('.drop-list select');
 const getButton = document.querySelector('form button');
+const apiKey = process.env.API_KEY;
 
 for (let i = 0; i < dropList.length; i++) {
   for (const currency_code in country_code) {
