@@ -1,19 +1,12 @@
-/*Footer Start*/
-body {
-    position: relative;
-    min-height: 100vh;
-    overflow: hidden; /* Hide the scrollbar */
-  }
-  
-  footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #f5f5f5;
-    padding: 50px;
-    text-align: center;
-    font-size: 14px;
-    color: #777;
-} 
-/*Footer End*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:wght@200;300;400;500&display=swap');
+
+/*Font Only*/
+:root {
+  font-family: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
