@@ -39,3 +39,49 @@ body {
 .wrapper form {
   margin: 40px 0 20px 0;
 }
+
+form :where(input,select,button) {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+form p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+form input {
+  height: 45px;
+  font-size: 17px;
+  padding: 0 15px;
+  border: 1px solid #999;
+}
+
+form input:focus {
+  padding: 0 14px;
+  border: 2px solid var(--background-color);
+}
+
+form .drop-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.drop-list .select-box {
+  display: flex;
+  width: 115px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+}
+
+.select-box select {
+  width: auto;
+}
+
+.select-box img {
+  max-width: 25px;
+}
