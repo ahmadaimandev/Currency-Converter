@@ -184,6 +184,8 @@ for (let i = 0; i < dropList.length; i++) {
 
 getButton.addEventListener("click", e => {
   e.preventDefault(); //prevent form submission
+  const amount = document.querySelector('.amount input');
+  amount.value = "1"; // reset the input field to "1"
   getExchangeRate();
 });
 
@@ -191,9 +193,10 @@ function getExchangeRate() {
   const amount = document.querySelector('.amount input');
   let amountVal = amount.value;
   if (amountVal === "" || amountVal === "0") {
-    amount.value = "1"; // corrected assignment operator
+    amount.value = "1";
     amountVal = 1;
   }
   // Perform further calculations or API requests for exchange rate
   // ...
 }
+
