@@ -3,52 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currency Converter</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="shortcut icon" href="/favicon-32x32.png" type="image/x-icon">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+    <!--CSS-->
+    <link rel="stylesheet" href="/assets/css/custom.css">
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <!--FontAwesome CDN-->
-    <script src="https://kit.fontawesome.com/dbcb87af55.js" crossorigin="anonymous"></script>
+    <script defer src="https://kit.fontawesome.com/dbcb87af55.js" crossorigin="anonymous"></script>
+    <title>Currency Converter </title>
 </head>
 <body>
+    
+    <!--Project Start-->
     <div class="wrapper">
-        <header>
-            Currency Converter
-        </header>
+        <header>Currency Converter</header>
+        
+        <!--Form Start-->
         <form action="#">
             <div class="amount">
                 <p>Enter Your Amount</p>
                 <input type="text" value="1">
             </div>
+
             <div class="drop-list">
-                <div class="From">
+                <div class="from">
                     <p>From</p>
                     <div class="select-box">
-                        <img src="https://www.countryflagicons.com/FLAT/64/US.png" alt="flag">
-                        <!--Flag API png <img src="https://www.countryflagicons.com/STYLE/size/COUNTRYCODE.png">
-                        https://www.countryflagicons.com/
-                        -->
-                        <select></select>
-                    </div>
-                </div>
-
-                <!--Font Awesome Icon Start-->
-                <div class="icon">
-                    <i class="fas fa-exchange-alt"></i>
-                </div>
-                <!--Font Awesome Icon End-->
-
-                <div class="To">
-                    <p>To</p>
-                    <div class="select-box">
-                        <img src="https://www.countryflagicons.com/FLAT/64/MY.png" alt="flag">
-                        <select></select>
+                        <img src="https://www.countryflagicons.com/FLAT/64/MY.png">
+                        <select><!--country option already set in javascript file--></select>
                     </div>
                 </div>
             </div>
-            <div class="exchange-rate">1 USD = 4.61 MYR</div>
+            <div class="exchange-rate">Getting Exchange Rate...</div>
             <button>Get Exchange Rate</button>
         </form>
+        <!--Form End-->
     </div>
+    <!--Project End-->
+
+    <script src="/assets/js/main.js"></script>
 </body>
-<script src="/assets/js/main.js"></script>
 </html>
