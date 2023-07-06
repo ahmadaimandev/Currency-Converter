@@ -1,13 +1,70 @@
 :root {
 
-    /*Font-Theme*/
+    /*Font-family*/
+    --font-family: 'Poppins', sans-serif;
+
     /*Font-Color*/
+    --theme-font-color: #2784d1;
+    --main-font-color: #fff;
+
     /*Theme Color*/
+    --background-color: #2784d1;
+    --wrapper-background-color: #fff;
+
     /*Components Color*/
+    --button-color:  #0d6cbb;
+    --form-input-color: #999;
 
 }
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--font-family  );
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 10px;
+    background: var(--background-color);
+}
+
+.wrapper {
+    width: 370px;
+    padding: 30px;
+    border-radius: 7px;
+    background: var(--wrapper-background-color);
+    box-shadow: 7px 7px 20px rgba(0,0,0,0.05);
+}
+
+.wrapper header {
+    text-align: center;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.wrapper form {
+    margin: 40px 0 20px 0;
+}
+
+form :where(input,select,button) {
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+}
+
+form p {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+form input {
+    height: 50px;
+    font-size: 17px;
+    padding: 0 15px;
+    border: 1px solid var(--form-input-color);
 }

@@ -17,28 +17,33 @@
     
     <!--Project Start-->
     <div class="wrapper">
-        <header>Currency Converter</header>
-        
-        <!--Form Start-->
+        <header>Money Currency Converter</header>
+
         <form action="#">
             <div class="amount">
-                <p>Enter Your Amount</p>
-                <input type="text" value="1">
+                <p>Enter your amount</p>
+                <input type="text" value="0.00">
             </div>
-
             <div class="drop-list">
                 <div class="from">
                     <p>From</p>
                     <div class="select-box">
                         <img src="https://www.countryflagicons.com/FLAT/64/MY.png">
-                        <select><!--country option already set in javascript file--></select>
+                        <select><!--Country List embeded in javascript file--></select>
+                    </div>
+                </div>
+                <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+                <div class="to">
+                    <p>To</p>
+                    <div class="select-box">
+                        <img src="https://www.countryflagicons.com/FLAT/64/USD.png">
+                        <select><!--Country List embeded in javascript file--></select>
                     </div>
                 </div>
             </div>
-            <div class="exchange-rate">Getting Exchange Rate...</div>
+            <div class="exchange-rate">Getting the exchange rate...</div>
             <button>Get Exchange Rate</button>
         </form>
-        <!--Form End-->
     </div>
     <!--Project End-->
 
