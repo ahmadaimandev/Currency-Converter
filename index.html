@@ -3,33 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Favicon-->
-    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+    <!--FontAwesome CDN-->
+    <script src="https://kit.fontawesome.com/dbcb87af55.js" crossorigin="anonymous"></script>
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     <!--CSS-->
     <link rel="stylesheet" href="/assets/css/custom.css">
-    <!--Google Font-->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-    <!--FontAwesome CDN-->
-    <script defer src="https://kit.fontawesome.com/dbcb87af55.js" crossorigin="anonymous"></script>
-    <title>Currency Converter </title>
+    <title>Currency Converter</title>
 </head>
 <body>
-    
-    <!--Project Start-->
     <div class="wrapper">
-        <header>Money Currency Converter</header>
-
+        <header>Currency Converter</header>
         <form action="#">
             <div class="amount">
-                <p>Enter your amount</p>
-                <input type="text" value="0.00">
+                <p>Enter Your Amount</p>
+                <input type="text" value="1">
             </div>
             <div class="drop-list">
                 <div class="from">
                     <p>From</p>
                     <div class="select-box">
                         <img src="https://www.countryflagicons.com/FLAT/64/MY.png">
-                        <select><!--Country List embeded in javascript file--></select>
+                        <select></select>
                     </div>
                 </div>
                 <div class="icon"><i class="fas fa-exchange-alt"></i></div>
@@ -37,15 +32,14 @@
                     <p>To</p>
                     <div class="select-box">
                         <img src="https://www.countryflagicons.com/FLAT/64/US.png">
-                        <select><!--Country List embeded in javascript file--></select>
+                        <select></select>
                     </div>
                 </div>
             </div>
-            <div class="exchange-rate">Getting the exchange rate...</div>
-            <button>Get Exchange Rate</button>
+            <div class="exchange-rate">Getting The Exchange Rate...</div>
+            <button>Convert</button>
         </form>
     </div>
-    <!--Project End-->
 
     <script src="/assets/js/main.js"></script>
 </body>
