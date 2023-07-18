@@ -3,52 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currency Converter</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="shortcut icon" href="/favicon-32x32.png" type="image/x-icon">
     <!--FontAwesome CDN-->
     <script src="https://kit.fontawesome.com/dbcb87af55.js" crossorigin="anonymous"></script>
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <!--CSS-->
+    <link rel="stylesheet" href="/assets/css/custom.css">
+    <title>Currency Converter</title>
 </head>
 <body>
     <div class="wrapper">
-        <header>
-            Currency Converter
-        </header>
+        <header>Currency Converter</header>
         <form action="#">
             <div class="amount">
                 <p>Enter Your Amount</p>
                 <input type="text" value="1">
             </div>
             <div class="drop-list">
-                <div class="From">
+                <div class="from">
                     <p>From</p>
                     <div class="select-box">
-                        <img src="https://www.countryflagicons.com/FLAT/64/US.png" alt="flag">
-                        <!--Flag API png <img src="https://www.countryflagicons.com/STYLE/size/COUNTRYCODE.png">
-                        https://www.countryflagicons.com/
-                        -->
+                        <img src="https://www.countryflagicons.com/FLAT/64/MY.png">
                         <select></select>
                     </div>
                 </div>
-
-                <!--Font Awesome Icon Start-->
-                <div class="icon">
-                    <i class="fas fa-exchange-alt"></i>
-                </div>
-                <!--Font Awesome Icon End-->
-
-                <div class="To">
+                <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+                <div class="to">
                     <p>To</p>
                     <div class="select-box">
-                        <img src="https://www.countryflagicons.com/FLAT/64/MY.png" alt="flag">
+                        <img src="https://www.countryflagicons.com/FLAT/64/US.png">
                         <select></select>
                     </div>
                 </div>
             </div>
-            <div class="exchange-rate">1 USD = 4.61 MYR</div>
-            <button>Get Exchange Rate</button>
+            <div class="exchange-rate">Getting The Exchange Rate...</div>
+            <button>Convert</button>
+            <p class="copyright-api">
+                Exchange Rate API Provided By <a href="https://www.exchangerate-api.com/">ExchangeRate-API</a>
+            </p>
         </form>
     </div>
+
+    <script src="/assets/js/main.js"></script>
 </body>
-<script src="/assets/js/main.js"></script>
 </html>

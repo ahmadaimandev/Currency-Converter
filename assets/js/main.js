@@ -1,4 +1,4 @@
-const country_code = {
+let country_list = {
     "AED" : "AE",
     "AFN" : "AF",
     "XCD" : "AG",
@@ -158,33 +158,20 @@ const country_code = {
     "ZAR" : "ZA",
     "ZMK" : "ZM",
     "ZWD" : "ZW"
-};
-
-const dropList = document.querySelectorAll('.drop-list select'),
-getButton = document.querySelector('form button');
-
-for(let i = 0; i < dropList.length; i++) {
-    for(currency_code in country_code) {
-
-        //select USD as default currency code//
-        let selected;
-        if(i == 0) {
-            selected = currency_code == "USD" ? "selected" : "";
-        }else if (i == 1) {
-            selected = currency_code == "MYR" ? "selected" : "";
-        }
-
-        let optionTag = `<option value="${currency_code}" ${selected}>${currency_code}</option>`;
-        dropList[i].insertAdjacentHTML("beforeend", optionTag);
-    }
 }
 
-getButton.addEventListener("click", e =>  {
-    // will prevent from submitting//
-    e.preventDefault(); 
-    getExchangeRate();
-});
+const dropList = document.querySelectorAll("form select"),
+fromCurrency = document.querySelector(".from select"),
+toCurrency = document.querySelector(".to select"),
+getButton = document.querySelector("form button");
 
-function getExchangeRate(){
-    
+for (let i = 0; i < dropList.length; i++) {
+    for (let currency_code in country_list) {
+        let selected = i == 0 ? currency_code == "MYR" ? "selected" : "" : currency_code == "USD" ? "selected" : "";
+        let optionTag = `<option value= "${currency_code}" ${selected}> ${currency_code}</option>`;
+        dropList[i].insertAdjacentElementHTML("beforeend", optionTag);
+    }
+    dropList[i].addEventListener("change", e =>{
+        loadFlag(e.target);
+    });
 }
