@@ -135,6 +135,11 @@ form button {
     transition: 0.3s ease;
 }
 
+.exchange-rate {
+    align-items: center;
+    text-align: center;
+}
+
 form button:hover {
     background: #0098f6;
 }
