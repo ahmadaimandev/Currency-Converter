@@ -64,8 +64,14 @@ form input {
 
 form input:focus {
     padding: 0 14px;
-    border: 1px solid #2674ea;
+    border: 2px solid #2674ea;
 }
+
+.from p,
+.to p {
+    text-align: center;
+}
+
 
 form .drop-list {
     display: flex;
@@ -85,7 +91,7 @@ form .drop-list {
 }
 
 .select-box img {
-    max-width: 21px;
+    max-width: 25px;
 }
 
 .select-box select {
@@ -108,3 +114,52 @@ form .drop-list {
     border-radius: 8px;
     border-right: 2px solid #ffff;
 }
+
+.drop-list .icon {
+    cursor: pointer;
+    margin-top: 30px;
+    font-size: 22px;
+}
+
+form .exchange-rate {
+    font-size: 17px;
+    margin: 20px 0 30px;
+}
+
+form button {
+    height: 52px;
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+    background: #2674ea;
+    transition: 0.3s ease;
+}
+
+form button:hover {
+    background: #0098f6;
+}
+
+p.copyright-api {
+    text-align: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 400;
+    padding: 10px;
+}
+
+p.copyright-api a {
+    color: #337ab7;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+p.copyright-api a:hover {
+    color: #ff13d0; /*Temporary Color*/
+    text-decoration: none;
+    font-weight: 500;
+    font-weight: bold;
+}
+
+  
+
