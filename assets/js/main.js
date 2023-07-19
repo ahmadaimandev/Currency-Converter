@@ -195,7 +195,7 @@ getButton.addEventListener("click", e => {
     getExchangeRate
 });
 
-const exchangeIcon = document.querySelector("form icon");
+const exchangeIcon = document.querySelector("form .icon");
 exchangeIcon.addEventListener("click", ()=> {
     let tempCode = fromCurrency.value;
     fromCurrency.value = toCurrency.value;
@@ -214,7 +214,7 @@ function getExchangeRate() {
         amountVal = 1;
     }
     exchangeRateTxt.innerText = "Getting The Exchange Rate...";
-    let url = `YOUR_API_KEY`;
+    let url = `https://v6.exchangerate-api.com/v6/YOUR_API_KEY/latest/${fromCurrency.value}`;
     fetch(url).then(Response => Response.json()).then(result => {
         let exchangeRate = result.conversion_rates[toCurrency.value];
         let totalExRate = (amountVal * exchangeRate).toFixed(2);
