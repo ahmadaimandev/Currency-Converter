@@ -168,5 +168,27 @@ p.copyright-api a:hover {
     font-weight: bold;
 }
 
-  
+.footer {
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    color: white;
+}
+.footer p {
+    font-size: 12px;
+}
+.footer a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: .3s ease;
+}
+.footer a:hover {
+    color: #000000;
+}
+
 
